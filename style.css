@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #0a0a0a;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    color: #ebeae4;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Kenia', cursive;
+}
+
+#canvas-container{
+    width: 100%;
+    text-align: center;
+}
+
+#game{
+    display: inline;
+    background-color: #303030;
+    image-rendering: pixelated;
+}
+
+#character{
+    position: relative;
+    z-index: "422";
+}
