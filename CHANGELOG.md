@@ -1,5 +1,8 @@
 # Mob Boss Changelog
 
+### v0.03
+Began JS development
+
 ### v0.02
 Installed asset packs
 

@@ -8,6 +8,7 @@ body{
     margin: 0;
     overflow: hidden;
     color: #ebeae4;
+    text-align: center;
 }
 
 h1{
@@ -15,18 +16,30 @@ h1{
     font-family: 'Kenia', cursive;
 }
 
-#canvas-container{
-    width: 100%;
-    text-align: center;
-}
-
-#game{
-    display: inline;
+.game-container{
+    display: inline-block;
     background-color: #303030;
-    image-rendering: pixelated;
+    width: 1280px;
+    height: 720px;
+    background-color: #303030;
+    background-image: url("./assets/img/CityBG.png");
 }
 
-#character{
-    position: relative;
-    z-index: "422";
+#btn{
+    background-color: transparent;
+    border: 0;
+    z-index: 2;
+}
+
+.bodega img{
+    position: absolute;
+    top: 265px;
+    left: 570px;
+}
+
+.mafiaWhiteShirt{
+    position: absolute;
+    top: 365px;
+    left: 585px;
+    z-index: 2;
 }

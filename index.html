@@ -10,8 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Kenia&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="canvas-container"><canvas id="game" width="1440" height="810">Your browser does not support this game!</canvas></div>
-    
+    <div class="game-container">
+        <button id="btn" class="bodega"><img src="./assets/img/pistol.png" id="gunBodega" alt="pistol image"></button>
+        <img src="./assets/img/MafiaWhiteShirt.png" class="mafiaWhiteShirt" alt="Mafia Guy">
+    </div>
     <h1>Mob Boss</h1>
+    <h2>Cash: $<span id="cashDisplay"></span></h2>
+    <h3 id="description"></h3>
+
+    <script src="./assets/buttons.js"></script>
+    <script src="./assets/cash.js"></script>
 </body>
 </html>
