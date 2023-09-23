@@ -6,7 +6,7 @@ This is my second game developed for the Milestone Project. After running into a
 
 ## Game Description
 
----
+Step into the dangerous world of organized crime in Mob Boss. In this thrilling idle clicker game, you'll start as a small-time boss with big dreams and your goal is to climb the criminal ladder by stealing, threatening, and expanding to become the most feared Mob Boss in the city!
 
 ## How do I play?
 
