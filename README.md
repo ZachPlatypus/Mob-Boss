@@ -1,4 +1,4 @@
-# Mob Boss v0.01
+# Mob Boss v0.02
 
 Milestone Project #1 for UNLV Software Development Bootcamp.
 
@@ -14,4 +14,6 @@ This is my second game developed for the Milestone Project. After running into a
 
 ## Credits
 
-A huge thank you to [AvKov](https://avkov.itch.io/city-tilemap-32x32) for the excellent assets that are used for this game.
+Thank you to:
+[AvKov](https://avkov.itch.io/city-tilemap-32x32) for the city assets that are used for this game.
+[ankousse26](https://ankousse26.itch.io/pixel-art-boutons) for the pixel art buttons used for this game.
