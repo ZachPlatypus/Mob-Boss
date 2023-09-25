@@ -1,4 +1,4 @@
-# Mob Boss v0.035
+# Mob Boss v0.04
 
 Milestone Project #1 for UNLV Software Development Bootcamp.
 
@@ -23,3 +23,5 @@ Thank you to:
 [Jestan](https://jestan.itch.io/weapons-pack) for the gun assets used for this game.
 
 [Denzhn](https://denzhn.itch.io/pixelart-mafia-characters) for the mafia assets used for this game.
+
+[Suit icons created by Nikita Golubev - Flaticon](https://www.flaticon.com/free-icons/suit)

@@ -1,5 +1,8 @@
 # Mob Boss Changelog
 
+### v0.04
+Major JS advancements, fully created initial functionality.
+
 ### v0.03
 Began JS development
 

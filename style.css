@@ -31,15 +31,16 @@ h1{
     z-index: 2;
 }
 
-.bodega img{
+#gunBodega{
     position: absolute;
     top: 265px;
     left: 570px;
 }
 
 .mafiaWhiteShirt{
+    display: none;
     position: absolute;
-    top: 365px;
+    top: 350px;
     left: 585px;
     z-index: 2;
 }
