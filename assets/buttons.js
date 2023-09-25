@@ -9,14 +9,22 @@ bodega.addEventListener("mouseout", () => {
     description.textContent = "";
 })
 function robBodega(){
-    if (bodegaManClicked = false){
-        cash += bodegaCash,
-        cashDisplay.textContent = cash,
-        showBodegaMan();
-    } else {
-        cash += bodegaCash,
+    cash += bodegaCash;
+    cashDisplay.textContent = cash;
+    showBodegaMan();
+
+    // HELP!!!!!!
+
+    /*if (bodegaManClicked = true){
+        cash += bodegaCash;
         cashDisplay.textContent = cash;
-    }
+        showBodegaMan();
+        console.log('test');
+    } else {
+        cash += bodegaCash;
+        cashDisplay.textContent = cash;
+        hideBodegaMan();
+    }*/
 }
 bodega.addEventListener("click", robBodega);
 
@@ -34,9 +42,7 @@ function showBodegaMan(){
 }
 
 function hideBodegaMan(){
-    if (bodegaManClicked = true){
-        bodegaMan.style.display = 'none';
-    }
+    bodegaMan.style.display = 'none';
 }
 
 // Bodega Man does stuff!
@@ -46,13 +52,11 @@ bodegaMan.addEventListener("mouseover", function(){
 bodegaMan.addEventListener("mouseout", function(){
     description.textContent = "";
 })
-
 function autoBodega(){
     setInterval(autoBodega, 5000)
-    cash += bodegaCash,
+    cash += bodegaCash;
     cashDisplay.textContent = cash;
 }
-
 bodegaMan.addEventListener("click", () => {
     autoBodega();
     bodegaManClicked = true;
@@ -60,3 +64,5 @@ bodegaMan.addEventListener("click", () => {
     cash -= 100;
     cashDisplay.textContent = cash;
 })
+
+// bodegaCash is doubling each time. don't know why??

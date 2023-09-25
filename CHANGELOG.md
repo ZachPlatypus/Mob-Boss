@@ -1,7 +1,10 @@
 # Mob Boss Changelog
 
+### v0.05
+Majority of functionality for bodegas implemented. Several bugs, mostly relating to hiding bodegaMan
+
 ### v0.04
-Major JS advancements, fully created initial functionality.
+Major JS advancements, fully created initial functionality
 
 ### v0.03
 Began JS development
