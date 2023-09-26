@@ -8,11 +8,7 @@ cashDisplay.textContent = cash;
 const buySMG = document.getElementById("gunSMG");
 let ownsSMG = false;
 
-// Saves Cash to local storage!
-function updateCash(){
-    cashDisplay.textContent = cash;
-    localStorage.setItem('savedCash', cash);
-};
+// Local Storage set up
 localStorage.setItem('savedBodegaMan', bodegaManClicked);
 localStorage.setItem('savedSMG', ownsSMG);
 
@@ -20,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedCash = localStorage.getItem('savedCash');
     if (savedCash !== null){
         console.log(savedCash)
-        cash = savedCash;
+        cash = parseInt(savedCash);
         cashDisplay.textContent = cash;
     };
 
@@ -37,6 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         ownsSMG = true;
     };
 });
+
+function updateCash(){
+    cashDisplay.textContent = cash;
+    localStorage.setItem('savedCash', cash);
+};
 
 // Upgrade to an SMG
 
