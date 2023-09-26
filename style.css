@@ -40,3 +40,11 @@ h1{
     left: 585px;
     z-index: 2;
 }
+
+#gunSMG{
+    /* display: none; */
+    position: absolute;
+    top: 650px;
+    left: 320px;
+    z-index: 2;
+}

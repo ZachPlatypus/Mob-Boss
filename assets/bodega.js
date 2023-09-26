@@ -4,6 +4,7 @@ let bodegaInterval = 1500;
 
 bodega.addEventListener("mouseover", () => {
     description.textContent = `Rob a Bodega, earning you $${bodegaCash}.`;
+    bodega.style.cursor = 'pointer';
 });
 bodega.addEventListener("mouseout", () => {
     description.textContent = "";
@@ -14,7 +15,7 @@ function robBodega(){
     const timeSinceLastRobbery = currentTime - lastRobberyTime;
     if (timeSinceLastRobbery >= bodegaInterval){
         cash += bodegaCash;
-        cashDisplay.textContent = cash;
+        updateCash();
         showBodegaMan();
         lastRobberyTime = currentTime;
         }
@@ -30,9 +31,7 @@ let bodegaManClicked = false;
 
 function showBodegaMan(){
     if (cash >= 100){
-        console.log("test1")
         if (bodegaManClicked === false){
-            console.log("test2")
             bodegaMan.style.display = 'inline-block';
         }
     } else {
@@ -45,17 +44,18 @@ function hideBodegaMan(){
 };
 
 // Bodega Man does stuff!
-bodegaMan.addEventListener("mouseover", function(){
+bodegaMan.addEventListener("mouseover", () => {
     description.textContent = `Hire an associate to handle the bodega for you, earning you $${bodegaCash} every ${robberyTime} seconds. Costs $100.`;
+    bodegaMan.style.cursor = 'pointer';
 });
 
-bodegaMan.addEventListener("mouseout", function(){
+bodegaMan.addEventListener("mouseout", () => {
     description.textContent = "";
 });
 
 function autoBodega(){
     cash += bodegaCash;
-    cashDisplay.textContent = cash;
+    updateCash();
 };
 
 bodegaMan.addEventListener("click", () => {
@@ -63,5 +63,5 @@ bodegaMan.addEventListener("click", () => {
     bodegaManClicked = true;
     hideBodegaMan();
     cash -= 100;
-    cashDisplay.textContent = cash;
+    updateCash();
 });
