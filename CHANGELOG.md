@@ -1,5 +1,8 @@
 # Mob Boss Changelog
 
+### v0.06
+Fully constructed bodega gameplay loop. Thanks Gerard!
+
 ### v0.05
 Majority of functionality for bodegas implemented. Several bugs, mostly relating to hiding bodegaMan
 

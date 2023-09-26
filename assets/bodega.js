@@ -1,68 +1,67 @@
-const description = document.getElementById("description")
-
 // Step 1 of game, rob a bodega!
 const bodega = document.querySelector(".bodega")
+let bodegaInterval = 1500;
+
 bodega.addEventListener("mouseover", () => {
     description.textContent = `Rob a Bodega, earning you $${bodegaCash}.`;
-})
+});
 bodega.addEventListener("mouseout", () => {
     description.textContent = "";
-})
+});
+
 function robBodega(){
-    cash += bodegaCash;
-    cashDisplay.textContent = cash;
-    showBodegaMan();
-
-    // HELP!!!!!!
-
-    /*if (bodegaManClicked = true){
+    const currentTime = Date.now();
+    const timeSinceLastRobbery = currentTime - lastRobberyTime;
+    if (timeSinceLastRobbery >= bodegaInterval){
         cash += bodegaCash;
         cashDisplay.textContent = cash;
         showBodegaMan();
-        console.log('test');
-    } else {
-        cash += bodegaCash;
-        cashDisplay.textContent = cash;
-        hideBodegaMan();
-    }*/
-}
+        lastRobberyTime = currentTime;
+        }
+};
+
 bodega.addEventListener("click", robBodega);
 
 // Hire a guy to hit up the bodega every now and then
 const bodegaMan = document.getElementById("bodegaMan");
-let bodegaManClicked = false;
 
 // Only shows the man when you can afford the $100 for him.
+let bodegaManClicked = false;
+
 function showBodegaMan(){
     if (cash >= 100){
-        bodegaMan.style.display = 'inline-block';
+        console.log("test1")
+        if (bodegaManClicked === false){
+            console.log("test2")
+            bodegaMan.style.display = 'inline-block';
+        }
     } else {
         bodegaMan.style.display = 'none';
     }
-}
+};
 
 function hideBodegaMan(){
     bodegaMan.style.display = 'none';
-}
+};
 
 // Bodega Man does stuff!
 bodegaMan.addEventListener("mouseover", function(){
-    description.textContent = `Hire an associate to handle the bodega for you, earning you $${bodegaCash} every ${robberyTime} seconds.`;
-})
+    description.textContent = `Hire an associate to handle the bodega for you, earning you $${bodegaCash} every ${robberyTime} seconds. Costs $100.`;
+});
+
 bodegaMan.addEventListener("mouseout", function(){
     description.textContent = "";
-})
+});
+
 function autoBodega(){
-    setInterval(autoBodega, 5000)
     cash += bodegaCash;
     cashDisplay.textContent = cash;
-}
+};
+
 bodegaMan.addEventListener("click", () => {
-    autoBodega();
+    setInterval(autoBodega, 5000);
     bodegaManClicked = true;
     hideBodegaMan();
     cash -= 100;
     cashDisplay.textContent = cash;
-})
-
-// bodegaCash is doubling each time. don't know why??
+});
