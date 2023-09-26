@@ -1,4 +1,4 @@
-// Step 1 of game, rob a factory!
+/* // Step 1 of game, rob a factory!
 const factory = document.querySelector(".factory")
 let factoryInterval = 1500;
 
@@ -64,4 +64,4 @@ factoryMan.addEventListener("click", () => {
     hideFactoryMan();
     cash -= 100;
     updateCash();
-});
+});*/
