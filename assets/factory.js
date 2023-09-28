@@ -17,8 +17,8 @@ function robFactory(){
         if (timeSinceLastRobbery >= factoryInterval){
             cash += factoryCash;
             updateCash();
-            showFactoryMan();
             lastRobberyTime = currentTime;
+            console.log("+$80");
         }
     }
 };
@@ -58,6 +58,7 @@ factoryMan.addEventListener("mouseout", function(){
 function autoFactory(){
     cash += factoryCash;
     updateCash();
+    showFactoryMan();
     console.log("+$80");
 };
 
@@ -67,4 +68,6 @@ factoryMan.addEventListener("click", () => {
     hideFactoryMan();
     cash -= 1000;
     updateCash();
+    localStorage.setItem('savedFactoryMan', factoryManClicked);
 });
+

@@ -24,13 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedBodegaMan === 'true'){
         bodegaManClicked = true;
         setInterval(autoBodega, 5000);
-        
     } else {
         showBodegaMan();
     }; 
 
     const savedSMG = localStorage.getItem('savedSMG');
-    console.log(ownsSMG)
+    console.log(savedSMG)
     if (savedSMG === 'true'){
         ownsSMG = true;
         gunFactory.style.display = 'inline-block';
@@ -38,11 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const savedFactoryMan = localStorage.getItem('savedFactoryMan');
-    console.log(ownsSMG)
+    console.log(savedFactoryMan)
     if (savedFactoryMan === 'true'){
-        savedFactoryMan = true;
+        factoryManClicked = true;
         setInterval(autoFactory, 5000);
-        
     } else {
         showFactoryMan();
     };
@@ -56,6 +54,8 @@ function updateCash(){
     } else {*/
         cashDisplay.textContent = cash;
         localStorage.setItem('savedCash', cash);
+        showBodegaMan();
+        showFactoryMan();
     //}
 };
 

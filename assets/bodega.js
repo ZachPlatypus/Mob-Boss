@@ -16,9 +16,8 @@ function robBodega(){
     if (timeSinceLastRobbery >= bodegaInterval){
         cash += bodegaCash;
         updateCash();
-        showBodegaMan();
-        showFactoryMan();
         lastRobberyTime = currentTime;
+        console.log("+$15");
         }
 };
 
