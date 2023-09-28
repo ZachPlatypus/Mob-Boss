@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Updating Cash & Victory Screen
 
-const gameContainer = document.querySelector(".game-container");
+const gameContainer = document.querySelector(".game-container"); // thank you Gerard!
 function updateCash(){
     if (cash >= 5000){
         gameContainer.style.backgroundImage = "url(./assets/img/CityBGWin.png)"
