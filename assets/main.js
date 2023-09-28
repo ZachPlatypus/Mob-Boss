@@ -51,6 +51,11 @@ const gameContainer = document.querySelector(".game-container"); // thank you Ge
 function updateCash(){
     if (cash >= 5000){
         gameContainer.style.backgroundImage = "url(./assets/img/CityBGWin.png)"
+        hideSMG();
+        hideBodegaMan();
+        hideFactoryMan();
+        bodega.style.display = 'none';
+        factory.style.display = 'none';
         updateCash();
     } else {
         cashDisplay.textContent = cash;

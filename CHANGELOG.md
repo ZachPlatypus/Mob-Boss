@@ -1,5 +1,11 @@
 # Mob Boss Changelog
 
+### v1.02
+Hides all other elements upon victory
+
+### v1.01
+Bug fixes
+
 ### v1.00 (Release)
 Added win conditions, just in time for presentation!
 
