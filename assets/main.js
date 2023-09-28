@@ -7,6 +7,7 @@ let lastRobberyTime = 0;
 cashDisplay.textContent = cash;
 const buySMG = document.getElementById("gunSMG");
 let ownsSMG = false;
+const gameContainer = document.getElementsByClassName("game-container");
 
 // Local Storage set up
 
@@ -23,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedBodegaMan === 'true'){
         bodegaManClicked = true;
         setInterval(autoBodega, 5000);
+        
+    } else {
+        showBodegaMan();
     }; 
 
     const savedSMG = localStorage.getItem('savedSMG');
@@ -38,12 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedFactoryMan === 'true'){
         savedFactoryMan = true;
         setInterval(autoFactory, 5000);
+        
+    } else {
+        showFactoryMan();
     };
 });
 
+// Updating Cash & Victory Screen
+
 function updateCash(){
-    cashDisplay.textContent = cash;
-    localStorage.setItem('savedCash', cash);
+    /* if (cash >= 5000){
+        gameContainer.style.backgroundImage = "url(./assets/img/CityBGWin.png)"
+    } else {*/
+        cashDisplay.textContent = cash;
+        localStorage.setItem('savedCash', cash);
+    //}
 };
 
 // Upgrade to an SMG
@@ -75,7 +88,7 @@ buySMG.addEventListener("mouseout", () => {
     description.textContent = "";
 });
 
-
+// Reset Progress
 const clearCashBtn = document.getElementById("clear");
 clearCashBtn.addEventListener("click", clearCash);
 function clearCash(){
@@ -88,3 +101,11 @@ function clearCash(){
     localStorage.setItem('savedFactoryMan', factoryManClicked);
     updateCash();
 };
+
+// For demonstration purposes
+const cashBtn = document.getElementById("cashBtn");
+cashBtn.addEventListener("click", getCash);
+function getCash(){
+    cash += 500;
+    updateCash();
+}

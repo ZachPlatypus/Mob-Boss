@@ -1,4 +1,4 @@
-# Mob Boss v0.09
+# Mob Boss v0.10 (Presentation Demo)
 
 Milestone Project #1 for UNLV Software Development Bootcamp.
 

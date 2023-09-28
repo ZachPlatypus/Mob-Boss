@@ -1,5 +1,8 @@
 # Mob Boss Changelog
 
+### v0.10 (Presentation Demo)
+Fully finished game, minus victory screen. Bodega & Factory functional all completed. Local Storage completed. Thanks a ton Gerard!
+
 ### v0.09
 Minor bug fixes, finished functionality of SMG upgrade & robbing factory
 

@@ -58,6 +58,7 @@ function autoBodega(){
     cash += bodegaCash;
     updateCash();
     showFactoryMan();
+    console.log("+$15");
 };
 
 bodegaMan.addEventListener("click", () => {

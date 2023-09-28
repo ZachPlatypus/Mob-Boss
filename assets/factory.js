@@ -47,7 +47,7 @@ function hideFactoryMan(){
 
 // Factory Man does stuff!
 factoryMan.addEventListener("mouseover", function(){
-    description.textContent = `Hire an associate to handle the factory for you, earning you $${factoryCash} every ${robberyTime} seconds. Costs $1000.`;
+    description.textContent = `Hire an associate to handle the factory for you, earning you $${factoryCash} every 5 seconds. Costs $1000.`;
     factoryMan.style.cursor = 'pointer';
 });
 
@@ -58,6 +58,7 @@ factoryMan.addEventListener("mouseout", function(){
 function autoFactory(){
     cash += factoryCash;
     updateCash();
+    console.log("+$80");
 };
 
 factoryMan.addEventListener("click", () => {
