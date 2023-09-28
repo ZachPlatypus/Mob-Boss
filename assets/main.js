@@ -7,7 +7,6 @@ let lastRobberyTime = 0;
 cashDisplay.textContent = cash;
 const buySMG = document.getElementById("gunSMG");
 let ownsSMG = false;
-const gameContainer = document.getElementsByClassName("game-container");
 
 // Local Storage set up
 
@@ -48,15 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Updating Cash & Victory Screen
 
+const gameContainer = document.querySelector(".game-container");
 function updateCash(){
-    /* if (cash >= 5000){
+    if (cash >= 5000){
         gameContainer.style.backgroundImage = "url(./assets/img/CityBGWin.png)"
-    } else {*/
+        updateCash();
+    } else {
         cashDisplay.textContent = cash;
         localStorage.setItem('savedCash', cash);
         showBodegaMan();
         showFactoryMan();
-    //}
+    }
 };
 
 // Upgrade to an SMG

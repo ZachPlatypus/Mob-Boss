@@ -1,4 +1,4 @@
-# Mob Boss v0.11 (Presentation Demo)
+# Mob Boss v1.00 (Release)
 
 Milestone Project #1 for UNLV Software Development Bootcamp.
 
@@ -25,3 +25,5 @@ Thank you to:
 [Denzhn](https://denzhn.itch.io/pixelart-mafia-characters) for the mafia assets used for this game.
 
 [Suit icons created by Nikita Golubev - Flaticon](https://www.flaticon.com/free-icons/suit)
+
+& most of all, thank you to my teachers! Gerard, Cody, Caleb, and every one else has been a major major help through this project.

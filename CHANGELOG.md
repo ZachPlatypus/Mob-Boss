@@ -1,5 +1,8 @@
 # Mob Boss Changelog
 
+### v1.00 (Release)
+Added win conditions, just in time for presentation!
+
 ### v0.11 (Production Demo)
 Bug fixes
 
