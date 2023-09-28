@@ -1,5 +1,8 @@
 # Mob Boss Changelog
 
+### v0.09
+Minor bug fixes, finished functionality of SMG upgrade & robbing factory
+
 ### v0.08
 Fixed Local Storage support
 

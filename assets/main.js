@@ -10,8 +10,6 @@ let ownsSMG = false;
 
 // Local Storage set up
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const savedCash = localStorage.getItem('savedCash');
     if (savedCash !== null){
@@ -34,6 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
         gunFactory.style.display = 'inline-block';
         hideSMG();
     };
+
+    const savedFactoryMan = localStorage.getItem('savedFactoryMan');
+    console.log(ownsSMG)
+    if (savedFactoryMan === 'true'){
+        savedFactoryMan = true;
+        setInterval(autoFactory, 5000);
+    };
 });
 
 function updateCash(){
@@ -49,7 +54,7 @@ function hideSMG(){
 
 function upgradeSMG(){
     if (cash >= 500){
-        if (ownsSMG = false){
+        if (ownsSMG === false){
         cash -= 500;
         updateCash();
         hideSMG();

@@ -64,6 +64,6 @@ factoryMan.addEventListener("click", () => {
     setInterval(autoFactory, 5000);
     factoryManClicked = true;
     hideFactoryMan();
-    cash -= 100;
+    cash -= 1000;
     updateCash();
 });

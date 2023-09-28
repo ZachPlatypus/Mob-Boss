@@ -17,6 +17,7 @@ function robBodega(){
         cash += bodegaCash;
         updateCash();
         showBodegaMan();
+        showFactoryMan();
         lastRobberyTime = currentTime;
         }
 };
@@ -56,6 +57,7 @@ bodegaMan.addEventListener("mouseout", () => {
 function autoBodega(){
     cash += bodegaCash;
     updateCash();
+    showFactoryMan();
 };
 
 bodegaMan.addEventListener("click", () => {
