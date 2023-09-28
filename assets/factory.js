@@ -1,6 +1,6 @@
-/* // Step 1 of game, rob a factory!
+// Step 1 of game, rob a factory!
 const factory = document.querySelector(".factory")
-let factoryInterval = 1500;
+let factoryInterval = 3000;
 
 factory.addEventListener("mouseover", () => {
     description.textContent = `Rob a Factory, earning you $${factoryCash}.`;
@@ -13,12 +13,14 @@ factory.addEventListener("mouseout", () => {
 function robFactory(){
     const currentTime = Date.now();
     const timeSinceLastRobbery = currentTime - lastRobberyTime;
-    if (timeSinceLastRobbery >= factoryInterval){
-        cash += factoryCash;
-        updateCash();
-        showFactoryMan();
-        lastRobberyTime = currentTime;
+    if (ownsSMG === true){
+        if (timeSinceLastRobbery >= factoryInterval){
+            cash += factoryCash;
+            updateCash();
+            showFactoryMan();
+            lastRobberyTime = currentTime;
         }
+    }
 };
 
 factory.addEventListener("click", robFactory);
@@ -30,7 +32,7 @@ const factoryMan = document.getElementById("factoryMan");
 let factoryManClicked = false;
 
 function showFactoryMan(){
-    if (cash >= 100){
+    if (cash >= 1000){
         if (factoryManClicked === false){
             factoryMan.style.display = 'inline-block';
         }
@@ -45,7 +47,7 @@ function hideFactoryMan(){
 
 // Factory Man does stuff!
 factoryMan.addEventListener("mouseover", function(){
-    description.textContent = `Hire an associate to handle the factory for you, earning you $${factoryCash} every ${robberyTime} seconds. Costs $100.`;
+    description.textContent = `Hire an associate to handle the factory for you, earning you $${factoryCash} every ${robberyTime} seconds. Costs $1000.`;
     factoryMan.style.cursor = 'pointer';
 });
 
@@ -64,4 +66,4 @@ factoryMan.addEventListener("click", () => {
     hideFactoryMan();
     cash -= 100;
     updateCash();
-});*/
+});

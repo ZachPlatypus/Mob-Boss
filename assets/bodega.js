@@ -45,7 +45,7 @@ function hideBodegaMan(){
 
 // Bodega Man does stuff!
 bodegaMan.addEventListener("mouseover", () => {
-    description.textContent = `Hire an associate to handle the bodega for you, earning you $${bodegaCash} every ${robberyTime} seconds. Costs $100.`;
+    description.textContent = `Hire an associate to handle the bodega for you, earning you $${bodegaCash} every 3 seconds. Costs $100.`;
     bodegaMan.style.cursor = 'pointer';
 });
 
@@ -59,9 +59,10 @@ function autoBodega(){
 };
 
 bodegaMan.addEventListener("click", () => {
-    setInterval(autoBodega, 5000);
+    setInterval(autoBodega, 3000);
     bodegaManClicked = true;
     hideBodegaMan();
     cash -= 100;
     updateCash();
+    localStorage.setItem('savedBodegaMan', bodegaManClicked);
 });

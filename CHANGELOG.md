@@ -1,5 +1,8 @@
 # Mob Boss Changelog
 
+### v0.08
+Fixed Local Storage support
+
 ### v0.07
 Added Local Storage support. Known Bug: bodegaManClicked & ownsSMG are not saving in Local Storage. Unsure as to why.
 

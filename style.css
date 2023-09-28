@@ -48,3 +48,20 @@ h1{
     left: 320px;
     z-index: 2;
 }
+
+#gunFactory{
+    /* display: none; */
+    display: none;
+    position: absolute;
+    top: 210px;
+    left: 1200px;
+    z-index: 2;
+}
+
+.mafiaBrownHat{
+    display: none;
+    position: absolute;
+    top: 350px;
+    left: 1185px;
+    z-index: 2;
+}

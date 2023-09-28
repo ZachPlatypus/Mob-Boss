@@ -2,17 +2,15 @@ let cash = 0;
 const cashDisplay = document.getElementById("cashDisplay");
 const description = document.getElementById("description");
 let bodegaCash = 15;
-let robberyTime = 5;
+let factoryCash = 80;
 let lastRobberyTime = 0;
 cashDisplay.textContent = cash;
 const buySMG = document.getElementById("gunSMG");
 let ownsSMG = false;
 
 // Local Storage set up
-localStorage.setItem('savedBodegaMan', bodegaManClicked);
-localStorage.setItem('savedSMG', ownsSMG);
 
-// code in bodega.js and main.js setting above Booleans to false is changing the ones below to false as the ones below are loaded after. need to shift things around.
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const savedCash = localStorage.getItem('savedCash');
@@ -33,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(ownsSMG)
     if (savedSMG === 'true'){
         ownsSMG = true;
+        gunFactory.style.display = 'inline-block';
+        hideSMG();
     };
 });
 
@@ -49,11 +49,15 @@ function hideSMG(){
 
 function upgradeSMG(){
     if (cash >= 500){
+        if (ownsSMG = false){
         cash -= 500;
         updateCash();
         hideSMG();
         ownsSMG = true;
+        gunFactory.style.display = 'inline-block';
+        localStorage.setItem('savedSMG', ownsSMG);
         }
+    }
 };
 
 buySMG.addEventListener("click", upgradeSMG);
@@ -71,5 +75,11 @@ const clearCashBtn = document.getElementById("clear");
 clearCashBtn.addEventListener("click", clearCash);
 function clearCash(){
     cash = 0;
+    bodegaManClicked = false;
+    localStorage.setItem('savedBodegaMan', bodegaManClicked);
+    ownsSMG = false;
+    localStorage.setItem('savedSMG', ownsSMG);
+    factoryManClicked = false;
+    localStorage.setItem('savedFactoryMan', factoryManClicked);
     updateCash();
 };
